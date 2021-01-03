@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title><br>
+        <h1 class="logo">{{ title }}</h1><br>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link href="style.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <div class="container">
+            <strong>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                    </ul>
+                </nav>
+            </strong>
+        </div>
+        <br>
+        <p>Sample Text</p>
+    </body>
+</html>

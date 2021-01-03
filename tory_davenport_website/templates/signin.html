@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            {{title}}
+        </title>
+        <meta name='viewport' content="width-device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link href="style.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Please Login</h1>
+            <br>
+            <form action="" method="POST">
+                <input type="text" placeholder="Username" name="username" value="{{
+                    request.form.username }}">
+                <input type="password" placeholder="Password" name="password" value="{{
+                    request.form.password }}">
+                <input class="btn btn-default" type="submit" value="Login">
+            </form>
+            {% if error %}
+                <p class="error"><strong>Error:</strong> {{ error }}
+            {% endif %}
+        </div>
+    </body>
+</html>
