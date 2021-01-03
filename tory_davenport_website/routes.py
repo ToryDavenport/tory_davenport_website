@@ -4,13 +4,14 @@ import os
 app = Flask(__name__)
 @app.route("/", methods=['GET', 'POST'])
 def sign_in():
-    error = None
-    if request.method == 'POST':
+    """error = None"""
+    return redirect(url_for('home'))
+    """if request.method == 'POST':
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
             error = 'Invalid Credentials. Please Try Again'
         else:
             return redirect(url_for('home'))
-    return render_template('signin.html', error=error)
+    return render_template('signin.html', error=error)"""
 
 @app.route("/index.html", methods=['GET', 'POST'])
 def home():
